@@ -24,7 +24,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>
     $.ajax({
-        url : "https://proxybay.one/index.html",
+        url : "https://thepiratebay-proxylist.org",
         success: function(result) {
           var page = document.createElement('html');
           page.innerHTML = result;
@@ -34,7 +34,7 @@
           });
         },
         error : function(err) {
-          document.getElementById('status').innerText = "Something's broken";
+          document.querySelectorAll('td[title="URL"]').innerText = "Something's broken";
         },
     });
   </script>
